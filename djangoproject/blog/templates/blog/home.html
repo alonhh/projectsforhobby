@@ -1,0 +1,31 @@
+{% extends 'blog/index.html' %}
+{% block content %}
+<section id="showcase">
+    <div class="container">
+        <h1> My Blog </h1>
+        <p>Its a cool Website</p>
+    </div>
+</section>
+
+<section id="posttitle">
+    <div class="container">
+        <h1> Latest Posts </h1>
+    </div>
+</section>
+
+<section id="boxes">
+    <div class="container">
+        {% for post in posts %}
+        <div class="box">
+            <h3> {{ post.title }} </h3>
+            <hr>
+            <p> {{ post.content }} </p>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<footer id="copyright">
+    <p> My Website, Copyright &copy; 2021 </p>
+</footer>
+{% endblock %}
